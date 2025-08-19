@@ -150,3 +150,5 @@ body {
   font-size: 0.75rem;
   color: var(--muted);
 }
+
+html { font-size: 18px; }

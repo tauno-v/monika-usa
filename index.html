@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="et">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#1f2937" />
+    <title>Monika USA‑sse</title>
+    <link rel="manifest" href="./manifest.json" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <h1 class="title">Monika USA‑sse</h1>
+      <div class="controls">
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="Otsi fraase…"
+          class="input"
+          aria-label="Otsing"
+        />
+        <select id="categorySelect" class="select" aria-label="Kategooria">
+          <option value="all">Kõik kategooriad</option>
+        </select>
+        <button id="addButton" class="btn">Lisa fraas</button>
+        <button id="importButton" class="btn">Impordi</button>
+        <button id="exportButton" class="btn">Ekspordi</button>
+      </div>
+    </header>
+    <main id="main">
+      <div id="card" class="card hidden">
+        <div id="estonian" class="estonian"></div>
+        <button id="showTranslation" class="btn small">Näita tõlget</button>
+        <div id="translation" class="translation hidden"></div>
+        <div class="actions">
+          <button id="playEnglish" class="btn small">Kuula inglise keelt</button>
+          <button id="recordSpeech" class="btn small">Ütle ise</button>
+          <button id="correctButton" class="btn small success">Õige</button>
+          <button id="wrongButton" class="btn small danger">Vale</button>
+        </div>
+        <div id="speechResult" class="speech-result"></div>
+      </div>
+      <div id="addForm" class="card hidden">
+        <h2>Lisa uus fraas</h2>
+        <label class="form-label">
+          Eesti keel
+          <input type="text" id="newEstonian" class="input" />
+        </label>
+        <label class="form-label">
+          Inglise keel
+          <input type="text" id="newEnglish" class="input" />
+        </label>
+        <label class="form-label">
+          Kategooria
+          <input type="text" id="newCategory" class="input" placeholder="nt hotell" />
+        </label>
+        <div class="actions">
+          <button id="saveNew" class="btn small success">Salvesta</button>
+          <button id="cancelAdd" class="btn small danger">Tühista</button>
+        </div>
+      </div>
+      <input type="file" id="importFile" class="hidden" accept="application/json" />
+    </main>
+    <footer class="footer">
+      <small>
+        Harjuta inglise keelt reisiks USA‑sse. Tekst kõneks ja kõnetuvastus kasutavad
+        brauseri võimalusi.
+      </small>
+    </footer>
+    <script src="./data.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
